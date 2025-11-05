@@ -1,0 +1,202 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "");
+	int choice;
+	cout << "Добро пожаловать в программу Словарь" << endl;
+	cout << "[1] - Русские слова " << endl;
+	cout << "[2] - Английские слова" << endl;
+	cout << "Выберите словарь: ";
+	cin >> choice;
+	switch (choice) {
+	case 1: {
+		cout << "Добро пожаловать в русский словарь" << endl;
+		cout << "Список русских слов для перевода" << endl;
+		cout << "[1] Дом" << endl;
+		cout << "[2] Дорога" << endl;
+		cout << "[3] Книга" << endl;
+		cout << "[4] Стол" << endl;
+		cout << "[5] Стул" << endl;
+		cout << "[6] Окно" << endl;
+		cout << "[7] Дверь" << endl;
+		cout << "[8] Компьютер" << endl;
+		cout << "[9] Телефон" << endl;
+		cout << "[10] Вода" << endl;
+		cout << "[11] Огонь" << endl;
+		cout << "[12] Земля" << endl;
+		cout << "[13] Воздух" << endl;
+		cout << "[14] Солнце" << endl;
+		cout << "[15] Луна" << endl;
+		int choice_word;
+		cout << "Выберите слово для перевода: ";
+		cin >> choice_word;
+		switch (choice_word) {
+		case 1: {
+			cout << "[+] Дом -> House";
+			break;
+		}
+		case 2: {
+			cout << "[+] Дорога -> Road";
+			break;
+		}
+		case 3: {
+			cout << "[+] Книга -> Book";
+			break;
+		}
+		case 4: {
+			cout << "[+] Стол -> Table";
+			break;
+		}
+		case 5: {
+			cout << "[+] Стул -> Chair";
+			break;
+		}
+		case 6: {
+			cout << "[+] Окно -> Window";
+			break;
+		}
+		case 7: {
+			cout << "[+] Дверь -> Door";
+			break;
+		}
+		case 8: {
+			cout << "[+] Компьютер -> Computer";
+			break;
+		}
+		case 9: {
+			cout << "[+] Телефон -> Phone";
+			break;
+		}
+		case 10: {
+			cout << "[+] Вода -> Water";
+			break;
+		}
+		case 11: {
+			cout << "[+] Огонь -> Fire";
+			break;
+		}
+		case 12: {
+			cout << "[+] Земля -> Earth";
+			break;
+		}
+		case 13: {
+			cout << "[+] Воздух -> Air";
+			break;
+		}
+		case 14: {
+			cout << "[+] Солнце -> Sun";
+			break;
+		}
+		case 15: {
+			cout << "[+] Луна -> Moon";
+			break;
+		}
+		default: 
+			cout << "Вы ввели другое число ";
+
+				break;
+		}
+
+
+
+		break;
+	}
+	case 2: {
+		cout << "Добро пожаловать в английский словарь" << endl;
+		cout << "Список английских слов для перевода" << endl;
+		cout << "[1] House" << endl;
+		cout << "[2] Road" << endl;
+		cout << "[3] Book" << endl;
+		cout << "[4] Table" << endl;
+		cout << "[5] Chair" << endl;
+		cout << "[6] Window" << endl;
+		cout << "[7] Door" << endl;
+		cout << "[8] Computer" << endl;
+		cout << "[9] Phone" << endl;
+		cout << "[10] Water" << endl;
+		cout << "[11] Fire" << endl;
+		cout << "[12] Earth" << endl;
+		cout << "[13] Air" << endl;
+		cout << "[14] Sun" << endl;
+		cout << "[15] Moon" << endl;
+
+		int choice_word1;
+		cout << "Выберите слово для перевода: ";
+		cin >> choice_word1;
+		switch (choice_word1) {
+	case 1: {
+		cout << "[+] House -> Дом";
+		break;
+	}
+	case 2: {
+		cout << "[+] Road -> Дорога";
+		break;
+	}
+	case 3: {
+		cout << "[+] Book -> Книга";
+		break;
+	}
+	case 4: {
+		cout << "[+] Table -> Стол";
+		break;
+	}
+	case 5: {
+		cout << "[+] Chair -> Стул";
+		break;
+	}
+	case 6: {
+		cout << "[+] Window -> Окно";
+		break;
+	}
+	case 7: {
+		cout << "[+] Door -> Дверь";
+		break;
+	}
+	case 8: {
+		cout << "[+] Computer -> Компьютер";
+		break;
+	}
+	case 9: {
+		cout << "[+] Phone -> Телефон";
+		break;
+	}
+	case 10: {
+		cout << "[+] Water -> Вода";
+		break;
+	}
+	case 11: {
+		cout << "[+] Fire -> Огонь";
+		break;
+	}
+	case 12: {
+		cout << "[+] Earth -> Земля";
+		break;
+	}
+	case 13: {
+		cout << "[+] Air -> Воздух";
+		break;
+	}
+	case 14: {
+		cout << "[+] Sun -> Солнце";
+		break;
+	}
+	case 15: {
+		cout << "[+] Moon -> Луна";
+		break;
+	}
+	default:
+		cout << "Вы ввели другое число ";
+
+		break;
+	}
+		break;
+	}
+	default:
+		cout << "Вы ввели другое число ";
+		break;
+
+	}
+	
+}
+
