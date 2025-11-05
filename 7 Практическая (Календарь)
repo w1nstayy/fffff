@@ -16,7 +16,7 @@ int main()
 	int day10;
 	int day11;
 	int day12;
-	cout << "Программа месяц года" << endl;
+	cout << "Программа Календарь" << endl;
 	
 	cout << "[ 1 ] Январь" << endl;
 	cout << "[ 2 ] Февраль" << endl;
