@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale(0, "");
+    cout << "Программа цикл WHILE" << endl;
+    while (true) {
+        cout << "Введите число: ";
+        int number;
+        cin >> number;
+        if (number == 0 || number > 15) {
+            cout << "Программа завершена" << endl;
+            break;
+        }
+        else {
+            int i;
+            i = 1;
+            while (i <= number) {
+                cout << "Цикл отработал. Круг: " << i << endl;
+                i++;
+            }
+
+
+        }
+    
+    
+    }
+
+    int _;
+    cin >> _;
+}
