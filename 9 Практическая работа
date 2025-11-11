@@ -8,9 +8,12 @@ int main() {
         cout << "Введите число: ";
         int number;
         cin >> number;
-        if (number == 0 || number > 15) {
+        if (number == 0) {
             cout << "Программа завершена" << endl;
             break;
+        }
+        else if (number > 15 || number < 0) {
+            cout << "ОШИБКА!!!!!" << endl;
         }
         else {
             int i;
@@ -19,13 +22,9 @@ int main() {
                 cout << "Цикл отработал. Круг: " << i << endl;
                 i++;
             }
-
-
         }
-    
-    
-    }
 
-    int _;
-    cin >> _;
-}
+    }
+    
+    
+ }
