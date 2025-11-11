@@ -4,6 +4,7 @@ using namespace std;
 int main() {
     setlocale(0, "");
     cout << "Программа цикл WHILE" << endl;
+    cout << "Для выхода из программы введите 0" << endl;
     while (true) {
         cout << "Введите число: ";
         int number;
@@ -25,6 +26,6 @@ int main() {
         }
 
     }
-    
-    
- }
+
+
+}
