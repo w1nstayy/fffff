@@ -9,9 +9,10 @@ int main() {
     int attemps = 5;
     int menu_choice;
     int number;
+    number = 0;
+    int random_number_1;
     int random_number_2;
     int random_number_3;
-    number = 0;
     setlocale(0, "");
     cout << "[Меню]" << endl;
     while (true) {
@@ -25,42 +26,58 @@ int main() {
         else if (menu_choice == 1) {
             system("cls");
             cout << "Добро пожаловать в игру угадайка " << endl;
-            int random_number_1 = rand() % 11;
-            int random_number_2 = rand() % 11;
-            int random_number_3 = rand() % 11;
-            while (true) {
-                if (number == 3) {
-                    cout << "ПОЗДРАВЛЯЕМ ВЫ ВЫЙГРАЛИ!!!";
-                    break;
+            random_number_1 = rand() % 11;
+            random_number_2 = rand() % 11;
+            random_number_3 = rand() % 11;
+            while (random_number_1 == 0 || random_number_2 == 0 || random_number_3 == 0) {
+                random_number_1 = rand() % 11;
+                random_number_2 = rand() % 11;
+                random_number_3 = rand() % 11;
+            }
+
+        }
+        while (true) {
+            if (number == 3) {
+                cout << "ПОЗДРАВЛЯЕМ ВЫ ВЫЙГРАЛИ!!!";
+                break;
+            }
+            if (attemps == 0) {
+                cout << "Попытки закончились :( " << endl;
+                cout << "ВЫ ПРОИГРАЛИ!!!";
+                break;
+            }
+
+            cout << "[+] Угаданых чисел" << "[" << number << "/3]" << endl;
+            cout << "[+] Попыток:" << attemps << endl << endl;
+            cout << "[>] Угадать число: ";
+            cin >> answer;
+            attemps--;
+            cout << endl;
+            if (answer == random_number_1 || answer == random_number_2 || answer == random_number_3) {
+                cout << "Вы угадали число !!" << endl << endl;
+                number++;
+                if (answer == random_number_1) {
+                    random_number_1 = -1;
                 }
-                if (attemps == 0) {
-                    cout << "Попытки закончились :( ";
-                    break;
+                if (answer == random_number_2) {
+                    random_number_2 = -1;
                 }
-                
-                cout << "[+] Угаданых чисел" << "[" << number << "/3]" << endl;
-                cout << "[+] Попыток:" << attemps << endl << endl;
-                cout << "[>] Угадать число: ";
-                cin >> answer;
-                attemps--;
-                cout << endl;
-                if (answer == random_number_1 || answer == random_number_2 || answer == random_number_3) {
-                    cout << "Вы угадали число !!" << endl << endl;
-                    number++;
+                if (answer == random_number_3) {
+                    random_number_3 = -1;
+                }
 
 
-                }
-                else {
-                    cout << "Вы не угадали число! Попробуйте ещё раз." << endl << endl;
-                }
-                
+            }
+            else {
+                cout << "Вы не угадали число! Попробуйте ещё раз." << endl << endl;
             }
 
         }
         break;
     }
+   
+
     int _;
     cin >> _;
     return 0;
-
 }
