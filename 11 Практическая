@@ -1,0 +1,39 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+int main() {
+	setlocale(0, "");
+	int choice_1;
+	int choice_2;
+	cout << "[+] Программа - Геометрические фигуры " << endl;
+	cout << "[1] Линия " << endl;
+	cout << "[2] Квадрат " << endl;
+	cout << "[3] Круг" << endl;
+	cout << "Выберите фигуру: ";
+	cin >> choice_1;
+	system("cls");
+	switch (choice_1) {
+	case 1: {
+		cout << "[+] Фигура: Линия " << endl << endl;
+		cout << "[1] Горизонтальная" << endl;
+		cout << "[2] Вертикальная" << endl << endl;
+		cout << "[+] Выберите тип: ";
+		cin >> choice_2;
+		break;
+	}
+	case 2: {
+		cout << "[+] Фигура: Квадрат" <<endl;
+
+		break;
+	}
+	case 3: {
+
+		break;
+		  }
+
+
+		  break;
+	}
+
+}
