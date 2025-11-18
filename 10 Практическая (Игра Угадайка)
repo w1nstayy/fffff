@@ -42,17 +42,21 @@ int main() {
                 break;
             }
             if (attemps == 0) {
-                cout << "Попытки закончились :( " << endl;
+                cout << "Попытки закончились :( " << endl << endl;
                 cout << "ВЫ ПРОИГРАЛИ!!!";
                 break;
             }
+
 
             cout << "[+] Угаданых чисел" << "[" << number << "/3]" << endl;
             cout << "[+] Попыток:" << attemps << endl << endl;
             cout << "[>] Угадать число: ";
             cin >> answer;
             attemps--;
+           
+
             cout << endl;
+
             if (answer == random_number_1 || answer == random_number_2 || answer == random_number_3) {
                 cout << "Вы угадали число !!" << endl << endl;
                 number++;
@@ -72,10 +76,11 @@ int main() {
                 cout << "Вы не угадали число! Попробуйте ещё раз." << endl << endl;
             }
 
+
         }
         break;
     }
-   
+
 
     int _;
     cin >> _;
