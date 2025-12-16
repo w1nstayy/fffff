@@ -22,7 +22,7 @@ int main() {
                 cout << "[ 2 ] Пустой" << endl;
                 cout << "[ + ] Выберите тип: ";
                 cin >> choice;
-                
+
                 system("cls");
                 if (choice == 1) {
                     while (true) {
@@ -30,15 +30,15 @@ int main() {
                         cout << "[ + ] Тип: Заполненный " << endl;
                         cout << "[ + ] Размер: ";
                         cin >> razmer;
-                        
+
                         if (razmer >= 1) {
                             cout << "[ + ] Текстура: ";
                             cin >> texture;
                             cout << endl;
                             for (int x = 0; x < razmer; x++) {
-                                for (int y = 0; y < razmer; y ++) {
+                                for (int y = 0; y < razmer; y++) {
                                     cout << " " << texture << " ";
-                                    
+
                                 }
                                 cout << endl;
                             }
@@ -57,14 +57,24 @@ int main() {
                     cout << "[ + ] Тип: Пустой " << endl;
                     cout << "[ + ] Размер:  ";
                     cin >> razmer;
-                    
+
                     if (razmer >= 1) {
                         cout << "[ + ] Текстура: ";
                         cin >> texture;
                         cout << endl;
-                        for (int i = 0; i < razmer; i++) {
-                            cout << " " << texture << " ";
+                        for (int x = 0; x < razmer; x++) {
+                            for (int y = 0; y < razmer; y++) {
+                                if (y == 0 || x == 0 || x == razmer - 1 || y == razmer - 1) {
+                                    cout << texture << " ";
+                                }
+                                else
+                                { 
+                                    cout << ". "; 
+                                }
+                            }
+                                
                             cout << endl;
+                              
 
                         }
 
@@ -75,7 +85,7 @@ int main() {
                     else {
                         cout << "Вы ввели неправильное значение" << endl << endl;
                     }
-             
+
                 }
                 else {
                     cout << "Вы ввели неправильное значение" << endl << endl;
