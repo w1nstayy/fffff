@@ -1,0 +1,198 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    setlocale(0, "");
+    int figura_square;
+    int choice_square;
+    int razmer_square;
+    char texture_square;
+    int figura_line;
+    int choice_line;
+    int razmer_line;
+    char texture_line;
+    int figura_triangle;
+    int choice_triangle;
+    int razmer_triangle;
+    char texture_triangle;
+    int figura_rectangle;
+    int choice_rectangle;
+    int razmer_rectangle;
+    char texture_rectangle;
+    int figura;
+    int lenght_line_1;
+    char texture_line_1;
+    while (true) {
+        cout << "[+] Программа - “Геометрические фигуры” " << endl;;
+        cout << "[ 1 ] Линия " << endl;;
+        cout << "[ 2 ] Квадрат " << endl;;
+        cout << "[ 3 ] Прямоугольник " << endl;;
+        cout << "[ 4 ] Треугольник " << endl;;
+        cout << "Выберите геометрическую фигуру: ";
+        cin >> figura;
+        cout << endl;
+        switch (figura) {
+        case 1:
+            while (true) {
+                system("cls");
+                while(true){
+                cout << "[+] Фигура: Линия " << endl << endl;
+                cout << "[1] Горизонтальная" << endl;
+                cout << "[2] Вертикальная" << endl << endl;
+                cout << "[+] Выберите тип: ";
+                cin >> choice_line;
+                cout << endl;
+                if (choice_line < 1 or choice_line > 2) {
+                    cout << "Вы ввели неправильное значение " << endl << endl;
+                }
+
+                else {
+                    switch (choice_line) {
+                    case 1: {
+                        while (true) {
+                            cout << "[+] Введите длинну линии: ";
+                            cin >> lenght_line_1;
+                            cout << endl;
+                            if (lenght_line_1 <= 0) {
+                                cout << "Вы ввели неправильное значение" << endl << endl;
+                            }
+                            else {
+                                cout << "[+] Введите текстуру линии: ";
+                                cin >> texture_line_1;
+                                while (lenght_line_1 > 0) {
+                                    cout << texture_line_1 << " ";
+                                    lenght_line_1--;
+                                }
+                                break;
+                                cout << endl;
+                                break;
+                            }
+                            break;
+                            
+                    case 2: {
+                        while (true) {
+                            cout << "[+] Введите длинну линии: ";
+                            cin >> lenght_line_1;
+                            cout << endl;
+                            if (lenght_line_1 <= 0) {
+                                cout << "Вы ввели неправильное значение" << endl << endl;
+                            }
+                            else {
+                                cout << "[+] Введите текстуру линии: ";
+                                cin >> texture_line_1;
+                                while (lenght_line_1 > 0) {
+                                    cout << texture_line_1 << " ";
+                                    cout << endl;
+                                    lenght_line_1--;
+                                }
+                                break;
+                                cout << endl;
+                            }
+                            
+                        }
+                        
+                        }
+                        
+
+                    }
+                        }
+                    }
+                          return 0;
+                    }
+        case 2:
+            system("cls");
+            while (true) {
+                cout << "[ + ] Фигура: “Квадрат” " << endl;
+                cout << "[ 1 ] Заполненный" << endl;
+                cout << "[ 2 ] Пустой" << endl;
+                cout << "[ + ] Выберите тип: ";
+                cin >> choice_square;
+
+                system("cls");
+                if (choice_square == 1) {
+                    while (true) {
+                        cout << "[ + ] Фигура: “Квадрат” " << endl;
+                        cout << "[ + ] Тип: Заполненный " << endl;
+                        cout << "[ + ] Размер: ";
+                        cin >> razmer_square;
+
+                        if (razmer_square >= 1) {
+                            cout << "[ + ] Текстура: ";
+                            cin >> texture_square;
+                            cout << endl;
+                            for (int x = 0; x < razmer_square; x++) {
+                                for (int y = 0; y < razmer_square; y++) {
+                                    cout << " " << texture_square << " ";
+
+                                }
+                                cout << endl;
+                            }
+
+                            break;
+                        }
+                        else {
+                            cout << "Вы ввели неправильное значение" << endl << endl;
+                        }
+                    }
+
+                    break;
+                }
+                else if (choice_square == 2) {
+                    cout << "[ + ] Фигура: “Квадрат” " << endl;
+                    cout << "[ + ] Тип: Пустой " << endl;
+                    cout << "[ + ] Размер:  ";
+                    cin >> razmer_square;
+
+                    if (razmer_square >= 1) {
+                        cout << "[ + ] Текстура: ";
+                        cin >> texture_square;
+                        cout << endl;
+                        for (int x = 0; x < razmer_square; x++) {
+                            for (int y = 0; y < razmer_square; y++) {
+                                if (y == 0 || x == 0 || x == razmer_square - 1 || y == razmer_square - 1) {
+                                    cout << texture_square << " ";
+                                }
+                                else
+                                {
+                                    cout << ". ";
+                                }
+                            }
+
+                            cout << endl;
+
+
+                        }
+
+
+
+                        break;
+                    }
+                    else {
+                        cout << "Вы ввели неправильное значение" << endl << endl;
+                    }
+
+                }
+                else {
+                    cout << "Вы ввели неправильное значение" << endl << endl;
+                }
+            }
+
+            break;
+                }
+                break;
+            }
+        case 3:
+
+            break;
+            
+        default:
+            cout << "Вы ввели неправильное значение" << endl << endl;
+            
+        }
+        
+
+
+    }
+    return 0;
+}
