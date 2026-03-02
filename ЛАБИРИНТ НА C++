@@ -1,0 +1,139 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main() {
+	setlocale(0, "");
+	int playerX = 5;
+	int playerY = 5;
+	while (true) {
+		cout << "Введите START чтобы перейти в меню, для выхода введите EXIT" << endl;
+		string choiceOne;
+		cin >> choiceOne;
+		if (choiceOne == "START") {
+			system("cls");
+
+			while (true) {
+				cout << "Добро пожаловать в игру лабиринт!" << endl;
+				cout << "[1] НАЧАТЬ ИГРУ" << endl;
+				cout << "[2] ПРАВИЛА ИГРЫ" << endl;
+				cout << "[3] ВЫХОД" << endl;
+				int choiceTwo;
+				cin >> choiceTwo;
+				switch (choiceTwo) {
+				case 1:
+					system("cls");
+					while (true) {
+						for (int i = 0; i <= 10; i++) {
+							for (int j = 0; j <= 10; j++) {
+								if (i == playerY && j == playerX) {
+									cout << "# ";
+								}
+								else {
+
+									cout << ". ";
+								}
+							}
+									cout << endl;
+								
+							
+						}
+						cout << endl;
+
+
+
+
+						break;
+
+
+						break;
+
+				case 2:
+					system("cls");
+					cout << "                 [+] ПРАВИЛА ИГРЫ [+]                " << endl;
+					cout << "[1] Управление: Игрок управляет игроком буквами WASD " << endl;
+					cout << "          W - вверх; A - влево; S - вниз; D - вправо;" << endl;
+					cout << "[2] Цель: Пройти лабиринт до конца." << endl;
+					cout << "[3] Ограничениe: Нельзя врезаться в стены лабиринта. " << endl;
+
+					cout << "Для выхода из меню нажмите любую клавишy......" << endl;
+					_getch();
+					system("cls");
+					break;
+
+				case 3:
+					system("cls");
+					cout << "Всего хорошего! " << endl;
+					exit(0);
+					break;
+					}
+
+
+
+				}
+			}
+		}
+		else if (choiceOne == "EXIT") {
+			system("cls");
+			cout << "Программа завершена! " << endl;
+			exit(0);
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+void exit(); {
+
+	return 0;
+}
+
+void map(); {
+	for (int i = 0; i <= 10; i++) {
+		for (int j = 0; j <= 10; j++) {
+			cout << ". ";
+		}
+		cout << endl;
+
+	}
+	cout << endl;
+
+
+}
+
+}
+
