@@ -1,0 +1,61 @@
+#include <iostream>
+#include <windows.h>
+using namespace std;
+
+int main()
+{
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+    setlocale(LC_ALL, "ru_RU.UTF-8");
+
+    int firstMassive[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int secondMassive[10] = { 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+    bool boolMassive[10] = { 1, 0, 1, 1, 1, 0, 0, 1, 0, 0 };
+    char char1Massive[7] = {'a', 'b', 'c', 'd', 'e', 'f', 'g'};
+    string stringMassive[3] = {"Hello", "c++", "Goodbye"};
+    double arrDouble[10] = { 1.11, 2.22, 3.33, 4.44, 5.55, 6.66, 7.77, 8.88, 9.99, 10.101 };
+    char arrChar[10] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J' };
+    bool arrBool[10] = { true, false, true, false, true, true, false, false, true, false };
+    int x = 0;
+    cout << " INT MASSIVE" << endl;
+    for (int x = 0; x < 10; x++) {
+        cout << " firstMassive[" << x << "] | Значение: " << firstMassive[x] << endl;
+    } 
+    cout << "SEKONDMASSiVE" << endl;
+    for (int y = 0; y < 10; y++) {
+        cout << " secondMassive[" << y << "] | Значение: " << secondMassive[y] << endl;
+
+    }
+    cout << endl << endl;
+    cout << " BOOL MASSIVE" << endl;
+
+    for (int q = 0; q < 10; q++) {
+        cout << " boolMassive[" << q << "] | Значение: " << boolMassive[q] << endl;
+
+    }
+    cout << "STRING MASSIVE" <<endl;
+    for (int W = 0; W < 10; W++) {
+        cout << " StringMassive[" << W << "] | Значение: " << boolMassive[W] << endl;
+
+    }
+    cout << "DOUBLE" << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << " arrDouble [ " << i << " ] | Значение: " << arrDouble[i] << endl;
+    }
+    cout << endl;
+    cout << "CHAR" << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << " arrChar [ " << i << " ]\t| Значение: " << arrChar[i] << endl;
+    }
+    cout << endl;
+    cout << " Массив BOOL:" << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << " arrBool [ " << i << " ]\t| Значение: " << boolalpha << arrBool[i] << endl;
+    }
+    cout << endl;
+
+
+
+    int _; cin >> _;
+    return 0;
+}
