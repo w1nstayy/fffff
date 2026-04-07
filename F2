@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int type;
+    int size;
+    char texture;
+
+    cout << "[+] Фигура: \"Четыре четверти\"" << endl << endl;
+
+    cout << "[1] Заполненный" << endl;
+    cout << "[2] Пустой" << endl << endl;
+
+    cout << "[+] Выберите тип: ";
+    cin >> type;
+
+    cout << endl << "[+] Размер: ";
+    cin >> size;
+
+    cout << endl << "[+] Текстура: ";
+    cin >> texture;
+
+    cout << endl << "[+] Результат:" << endl << endl;
+
+    int map = size * 2;
+
+  
+
+    cout << endl;
+
+    for (int i = 0; i < map; i++)
+    {
+        for (int j = 0; j < map; j++)
+        {
+            int li = i % size;
+            int lj = j % size;
+
+            bool border = (li == 0 || lj == 0 || li == size - 1 || lj == size - 1);
+
+            string color;
+
+            if (i < size && j < size) color = "\033[32m";       // зелёный
+            else if (i < size && j >= size) color = "\033[34m"; // синий
+            else if (i >= size && j < size) color = "\033[31m"; // красный
+            else color = "\033[35m";                            // фиолетовый
+
+            if (type == 1)
+            {
+                cout << color << texture << "\033[0m ";
+            }
+            else
+            {
+                if (border)
+                    cout << color << texture << "\033[0m ";
+                else
+                    cout << ". ";
+            }
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
