@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int number1;
+	int number2;
+	int number3;
+	int number4;
+	int number5;
+	cout << "1 Number?: ";
+	cin >> number1; cout << endl;
+	cout << "2 Number?: ";
+	cin >> number2; cout << endl;
+	cout << "3 Number?: ";
+	cin >> number3; cout << endl;
+	cout << "4 Number?: ";
+	cin >> number4; cout << endl;
+	cout << "5 Number?: ";
+	cin >> number5;
+	system("cls");
+	int y = 1;
+	int n[5] = { number1, number2, number3, number4, number5 };
+	for (int x = 0; x < 5; x++) {
+		
+		cout << "| " << y << " table" << endl;
+		cout << "-------------------------------------------------------------------" << endl;
+		cout << "|Number|Example|Result|" << endl;
+		cout << "-------------------------------------------------------------------" << endl;
+		cout << "|" << n[x] << "|" << n[x] << " + " << n[x] << "|" << n[x] + n[x] << "|" << endl;
+		cout << 
+		y++;
+	}
+	return 0;
+}
