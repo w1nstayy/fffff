@@ -1,0 +1,112 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <conio.h>
+#include <windows.h>
+
+using namespace std;
+
+const char WALL = '#';
+const char PLAYER = '@';
+const char EXIT_C = 'E';
+
+vector<string> maze = {
+    "####################",
+    "#   #     #     #   #",
+    "# # # ### # ### # # #",
+    "# #   #       # # # #",
+    "# ##### ##### # # # #",
+    "#       #   # # #   #",
+    "####### # # # # ### #",
+    "#     # # # # #   # #",
+    "# ### # # ####### # #",
+    "# #   #       #   # #",
+    "# # ######### # ### #",
+    "#   #         #     E",
+    "####################"
+};
+
+int playerX = 1, playerY = 1;
+
+
+void setCursor(int x, int y) {
+    COORD coord = { (SHORT)x, (SHORT)y };
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
+
+
+void hideCursor() {
+    CONSOLE_CURSOR_INFO info = { 1, FALSE };
+    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
+}
+
+
+void drawCell(int x, int y, char ch) {
+    setCursor(x, y + 3);
+    if (ch == WALL)
+        cout << '#';
+    else if (ch == EXIT_C)
+        cout << 'E';
+    else if (ch == PLAYER)
+        cout << '@';
+    else
+        cout << ' ';
+}
+
+void drawFull() {
+    setCursor(0, 0);
+    
+    cout << "=== MAZE ===" << endl;
+    cout << "CONTROLS: W A S D  |  EXIT: Q" << endl;
+    cout << "Your goal is to get to [E]" << endl;
+
+    for (int y = 0; y < (int)maze.size(); y++) {
+        for (int x = 0; x < (int)maze[y].size(); x++) {
+            if (x == playerX && y == playerY)
+                cout << PLAYER;
+            else
+                cout << maze[y][x];
+        }
+        cout << "\n";
+    }
+}
+
+bool canMove(int x, int y) {
+    if (y < 0 || y >= (int)maze.size()) return false;
+    if (x < 0 || x >= (int)maze[y].size()) return false;
+    return maze[y][x] != WALL;
+}
+
+int main() {
+
+    hideCursor();
+    system("cls");
+    drawFull();
+
+    while (true) {
+        if (maze[playerY][playerX] == EXIT_C) {
+            setCursor(0, (int)maze.size() + 4);
+            cout << "\n  *** My congratulations! You found the exit! ***" << endl;
+            break;
+        }
+
+        char key = _getch();
+
+        int nx = playerX, ny = playerY;
+
+        if (key == 'w' || key == 'W') ny--;
+        else if (key == 's' || key == 'S') ny++;
+        else if (key == 'a' || key == 'A') nx--;
+        else if (key == 'd' || key == 'D') nx++;
+        else if (key == 'q' || key == 'Q') break;
+
+        if (canMove(nx, ny)) {
+            drawCell(playerX, playerY, maze[playerY][playerX]);
+            playerX = nx;
+            playerY = ny;
+            drawCell(playerX, playerY, PLAYER);
+        }
+    }
+
+    return 0;
+}
